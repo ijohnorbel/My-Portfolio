@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iscala John Orbel - Portfolio</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FFD100',secondary:'#333333'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+html {
+scroll-behavior: smooth;
+}
+body {
+font-family: 'Inter', sans-serif;
+}
+.skill-bar {
+transition: width 1s ease-in-out;
+}
+.project-card:hover .project-overlay {
+opacity: 1;
+}
+.project-card:hover img {
+transform: scale(1.05);
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 w-full bg-white bg-opacity-95 shadow-sm z-50 py-4">
+<div class="container mx-auto px-6 flex justify-between items-center">
+<a href="#" class="text-2xl font-['Pacifico'] text-gray-800">Kalli</a>
+<div class="hidden md:flex space-x-8">
+<a href="#about" class="hover:text-primary transition-colors">About</a>
+<a href="#skills" class="hover:text-primary transition-colors">Skills</a>
+<a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+<a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu (Hidden by default) -->
+<div class="fixed inset-0 bg-white z-40 hidden flex-col pt-20 px-6 pb-6">
+<a href="#about" class="py-4 border-b border-gray-100 hover:text-primary transition-colors">About</a>
+<a href="#skills" class="py-4 border-b border-gray-100 hover:text-primary transition-colors">Skills</a>
+<a href="#projects" class="py-4 border-b border-gray-100 hover:text-primary transition-colors">Projects</a>
+<a href="#contact" class="py-4 border-b border-gray-100 hover:text-primary transition-colors">Contact</a>
+</div>
+<!-- Hero Section -->
+<header id="home" class="min-h-screen flex items-center relative overflow-hidden pt-20">
+<div class="absolute inset-0 bg-[url('https://readdy.ai/api/search-image?query=abstract%2520modern%2520background%2520design%2520with%2520geometric%2520shapes%2520and%2520patterns%252C%2520yellow%2520and%2520white%2520color%2520scheme%252C%2520minimalist%2520style%252C%2520professional%2520design%252C%2520high%2520quality%2520digital%2520art&width=1920&height=1080&seq=bg1&orientation=landscape')] bg-cover bg-center opacity-10"></div>
+<div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+<div class="container mx-auto px-6 w-full relative">
+<div class="flex flex-col md:flex-row items-center justify-between">
+<div class="md:w-1/2 z-10">
+<p class="text-xl mb-2 text-gray-600">Hi i'm</p>
+<h1 class="text-6xl md:text-7xl font-bold mb-4 text-gray-800">John Orbel</h1>
+<p class="text-lg md:text-xl text-primary font-medium mb-8">SOFTWARE ENGINEERING STUDENT</p>
+<div class="flex space-x-4">
+<a href="#about" class="bg-primary text-gray-800 px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">ABOUT ME</a>
+<a href="#contact" class="bg-gray-800 text-white px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">CONTACT</a>
+</div>
+</div>
+<div class="md:w-1/2 mt-12 md:mt-0 flex justify-center relative">
+<div class="absolute -top-20 -right-20 w-[700px] h-[700px] rounded-full bg-gradient-to-br from-primary/20 to-transparent"></div>
+<div class="absolute -bottom-20 -left-20 w-[700px] h-[700px] rounded-full bg-gradient-to-tr from-primary/10 to-transparent"></div>
+<div class="w-[600px] h-[600px] rounded-full bg-primary/10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+<img src="pic1.jpg" alt="Profile" class="w-[520px] h-[520px] object-cover rounded-full relative z-10 shadow-2xl">
+</div>
+</div>
+</div>
+</header>
+<!-- About Section -->
+<section id="about" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-2/5">
+<div class="relative overflow-hidden rounded-xl bg-primary bg-opacity-10">
+<img src="https://static.readdy.ai/image/fd838c000cc20dc729b42c547497789c/82850546bc455dbb1cf8e41e89b5118e.jpeg" alt="CHRISANT" class="w-full h-auto object-top">
+</div>
+</div>
+<div class="md:w-3/5">
+<h2 class="text-4xl font-bold mb-2">ABOUT <span class="text-primary">ME</span></h2>
+<div class="w-20 h-1 bg-primary mb-6"></div>
+<p class="text-lg mb-6">Hi! I'm John Orbel A. Iscala, a passionate Software Engineering student currently studying at Aklan State University. I’m always eager to learn and grow in the world of technology, especially in developing practical solutions through software.</p>
+<p class="text-lg mb-8">I have solid experience with Microsoft Office tools like Word, PowerPoint, and Excel, and I also have a knack for basic editing. Whether it’s organizing data, creating clean presentations, or writing reports, I make sure my work is clear and well-structured.</p>
+<div class="grid grid-cols-2 gap-6 mb-8">
+<div>
+<p class="font-medium">Name:</p>
+<p>John Orbel A. Iscala</p>
+</div>
+<div>
+<p class="font-medium">Email:</p>
+<p>ijohnorbel@gmail.com</p>
+</div>
+<div>
+<p class="font-medium">Location:</p>
+<p>Dangcalan, Malinao, Aklan</p>
+</div>
+<div>
+<p class="font-medium">Freelance:</p>
+<p>Available</p>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-gray-800 rounded-full hover:bg-opacity-90 transition-all">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-gray-800 rounded-full hover:bg-opacity-90 transition-all">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-gray-800 rounded-full hover:bg-opacity-90 transition-all">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-primary text-gray-800 rounded-full hover:bg-opacity-90 transition-all">
+<i class="ri-behance-line"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section id="skills" class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-2">MY <span class="text-primary">SKILLS</span></h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg max-w-2xl mx-auto">I've developed a diverse set of skills throughout my career, focusing on design, content creation, and digital marketing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-2xl font-bold mb-6">Design Skills</h3>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Canva Design and Basic Editing in Capcut</span>
+<span>95%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 95%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">UI/UX Design</span>
+<span>85%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 85%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Graphic Design</span>
+<span>90%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 90%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Brand Identity</span>
+<span>80%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 80%"></div>
+</div>
+</div>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-6">Digital Skills</h3>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Content Creation</span>
+<span>90%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 90%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Social Media Marketing</span>
+<span>85%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 85%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">Video Editing</span>
+<span>75%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 75%"></div>
+</div>
+</div>
+<div class="mb-6">
+<div class="flex justify-between mb-2">
+<span class="font-medium">SEO Optimization</span>
+<span>70%</span>
+</div>
+<div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+<div class="h-full bg-primary skill-bar" style="width: 70%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-palette-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold mb-1">Design</h4>
+<p>Canva Expert</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-video-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold mb-1">Content</h4>
+<p>Video & Graphics</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-lightbulb-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold mb-1">Strategy</h4>
+<p>Digital Marketing</p>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-customer-service-2-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold mb-1">Support</h4>
+<p>Client Consultation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-2">MY <span class="text-primary">PROJECTS</span></h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg max-w-2xl mx-auto">Here are some of my recent projects showcasing my design and content creation skills.</p>
+</div>
+<div class="flex justify-center mb-10">
+<div class="inline-flex bg-gray-200 p-1 rounded-full">
+<button class="px-6 py-2 rounded-full bg-primary text-gray-800 font-medium whitespace-nowrap">All</button>
+<button class="px-6 py-2 rounded-full text-gray-600 font-medium whitespace-nowrap hover:bg-gray-100 transition-all">Web Design</button>
+<button class="px-6 py-2 rounded-full text-gray-600 font-medium whitespace-nowrap hover:bg-gray-100 transition-all">Branding</button>
+<button class="px-6 py-2 rounded-full text-gray-600 font-medium whitespace-nowrap hover:bg-gray-100 transition-all">Social Media</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520website%2520design%2520for%2520a%2520coffee%2520shop%2520with%2520yellow%2520accents%252C%2520professional%2520web%2520design%252C%2520clean%2520layout%252C%2520high%2520quality%2520mockup%2520on%2520laptop%2520screen&width=600&height=450&seq=project1&orientation=landscape" alt="Coffee Shop Website" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Coffee Shop Website</h3>
+<p class="text-white mb-4">Web Design / Branding</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520social%2520media%2520template%2520design%2520for%2520instagram%2520with%2520yellow%2520color%2520scheme%252C%2520professional%2520graphic%2520design%252C%2520clean%2520layout%252C%2520high%2520quality%2520mockup%2520on%2520smartphone%2520screen&width=600&height=450&seq=project2&orientation=landscape" alt="Social Media Campaign" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Social Media Campaign</h3>
+<p class="text-white mb-4">Social Media / Content</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520brand%2520identity%2520design%2520for%2520a%2520fitness%2520company%2520with%2520yellow%2520accents%252C%2520professional%2520graphic%2520design%252C%2520logo%2520mockup%252C%2520business%2520cards%252C%2520high%2520quality%2520presentation&width=600&height=450&seq=project3&orientation=landscape" alt="Fitness Brand Identity" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Fitness Brand Identity</h3>
+<p class="text-white mb-4">Branding / Logo Design</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520e-commerce%2520website%2520design%2520for%2520a%2520fashion%2520store%2520with%2520yellow%2520accents%252C%2520professional%2520web%2520design%252C%2520clean%2520layout%252C%2520high%2520quality%2520mockup%2520on%2520desktop%2520screen&width=600&height=450&seq=project4&orientation=landscape" alt="Fashion E-commerce Site" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Fashion E-commerce Site</h3>
+<p class="text-white mb-4">Web Design / UI/UX</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520social%2520media%2520content%2520calendar%2520design%2520with%2520yellow%2520accents%252C%2520professional%2520graphic%2520design%252C%2520clean%2520layout%252C%2520high%2520quality%2520mockup%2520showing%2520multiple%2520posts&width=600&height=450&seq=project5&orientation=landscape" alt="Content Calendar" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Content Calendar</h3>
+<p class="text-white mb-4">Social Media / Strategy</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+<div class="project-card group">
+<div class="relative overflow-hidden rounded-lg">
+<img src="https://readdy.ai/api/search-image?query=modern%2520restaurant%2520menu%2520design%2520with%2520yellow%2520accents%252C%2520professional%2520graphic%2520design%252C%2520clean%2520layout%252C%2520high%2520quality%2520mockup%2520of%2520printed%2520menu&width=600&height=450&seq=project6&orientation=landscape" alt="Restaurant Menu Design" class="w-full h-64 object-cover transition-transform duration-500">
+<div class="project-overlay absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 transition-opacity duration-300">
+<div class="text-center p-6">
+<h3 class="text-xl font-bold text-white mb-2">Restaurant Menu Design</h3>
+<p class="text-white mb-4">Print Design / Branding</p>
+<a href="#" class="inline-block bg-white text-gray-800 px-4 py-2 rounded-full font-medium hover:bg-opacity-90 transition-all">View Project</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="#" class="inline-block bg-primary text-gray-800 px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition-all">View All Projects</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold mb-2">GET IN <span class="text-primary">TOUCH</span></h2>
+<div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg max-w-2xl mx-auto">Feel free to reach out if you're looking for a collaborator, have a question, or just want to connect.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-map-pin-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold text-xl mb-2">Location</h4>
+<p>Dangcalan, Malinao, Aklan<br>Philippines</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-mail-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold text-xl mb-2">Email</h4>
+<p>
+  ijohnorbel@gmail.com<br>
+  FB: 
+  <a href="https://www.facebook.com/share/12JWKwNqDxQ" target="_blank" class="text-blue-600 underline">
+    John Orbel A. Iscala
+  </a>
+</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg text-center">
+<div class="w-16 h-16 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mx-auto mb-4">
+<i class="ri-phone-line text-2xl text-primary"></i>
+</div>
+<h4 class="font-bold text-xl mb-2">Phone</h4>
+<p>09453972781<br>Mon-Fri, 9am-5pm EST</p>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<h3 class="text-2xl font-bold mb-6">Send Me a Message</h3>
+<form>
+<div class="mb-4">
+<input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div class="mb-4">
+<input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div class="mb-4">
+<input type="text" placeholder="Subject" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+</div>
+<div class="mb-4">
+<textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+</div>
+<button type="submit" class="bg-primary text-gray-800 px-6 py-3 font-medium !rounded-button whitespace-nowrap hover:bg-opacity-90 transition-all">Send Message</button>
+</form>
+</div>
+<div>
+<h3 class="text-2xl font-bold mb-6">Find Me On Map</h3>
+<div class="h-80 bg-gray-200 rounded-lg overflow-hidden"
+     style="background-image: url('dangcalanmap.png'); background-size: cover; background-position: center;">
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white py-12">
+<div class="container mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<div class="mb-8 md:mb-0">
+<a href="#" class="text-3xl font-['Pacifico'] text-white mb-4 inline-block">Kalli</a>
+<p class="max-w-md">Empowering others to thrive in the digital world through creative design and content creation.</p>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<div class="flex space-x-4 mb-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 text-white rounded-full hover:bg-primary hover:text-gray-800 transition-all">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 text-white rounded-full hover:bg-primary hover:text-gray-800 transition-all">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 text-white rounded-full hover:bg-primary hover:text-gray-800 transition-all">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 text-white rounded-full hover:bg-primary hover:text-gray-800 transition-all">
+<i class="ri-behance-line"></i>
+</a>
+</div>
+<p>&copy; 2025 JOHN ORBEL. All rights reserved.</p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<a href="#home" class="fixed bottom-8 right-8 w-12 h-12 bg-primary text-gray-800 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300" id="backToTop">
+<i class="ri-arrow-up-line text-xl"></i>
+</a>
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuButton = document.querySelector('.md\\:hidden');
+const mobileMenu = document.querySelector('.fixed.inset-0.bg-white');
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+mobileMenu.classList.add('flex');
+} else {
+mobileMenu.classList.add('hidden');
+mobileMenu.classList.remove('flex');
+}
+});
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+mobileMenu.classList.remove('flex');
+});
+});
+});
+</script>
+<script id="scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+if (window.scrollY > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.add('opacity-0', 'invisible');
+backToTopButton.classList.remove('opacity-100', 'visible');
+}
+});
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for fixed header
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+<script id="skills-animation-script">
+document.addEventListener('DOMContentLoaded', function() {
+const skillBars = document.querySelectorAll('.skill-bar');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.width = entry.target.style.width;
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+skillBars.forEach(bar => {
+// Initially set width to 0
+const targetWidth = bar.style.width;
+bar.style.width = '0%';
+// Observe the skill bar
+observer.observe(bar);
+// When it comes into view, animate to target width
+setTimeout(() => {
+bar.style.width = targetWidth;
+}, 100);
+});
+});
+</script>
+</body>
+</html>
